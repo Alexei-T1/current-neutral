@@ -1,0 +1,23 @@
+html {
+  height: 100%;
+}
+
+body, .wrapper {
+  min-height: 100vh;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.wrapper_neutral {
+ text-align: center;
+}
+
+.neutral {
+ 
+}
