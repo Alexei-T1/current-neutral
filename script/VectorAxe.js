@@ -1,13 +1,13 @@
 import { Vector } from "./Vector.js";
 
-class VectorCurrent extends Vector {
+class VectorAxe extends Vector {
   constructor(len, angle, startPoint, lineColor, lineWidth = 1) {
     super(len, angle, startPoint, lineColor, lineWidth);
   }
 
-  draw(field) {
+  draw(field, arrow = true) {
     super.draw(field);
-    this.drawArray(field);  
+    if(arrow) { this.drawArray(field) }     
   }
 
   drawArray(field, color = 'black') {
@@ -37,4 +37,4 @@ class VectorCurrent extends Vector {
 
 }
 
-export { VectorCurrent }
+export { VectorAxe }

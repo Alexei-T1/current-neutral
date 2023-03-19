@@ -1,4 +1,5 @@
 html {
+  font-size: 16px;
   height: 100%;
 }
 
@@ -9,7 +10,7 @@ body, .wrapper {
 .main {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 
   flex-direction: column;
 }
@@ -17,7 +18,67 @@ body, .wrapper {
 .wrapper_neutral {
  text-align: center;
 }
+.neutral_name {
+  margin-right: 1rem;
+}
+.neutral_current {
+  font-size: 1.4rem;
+}
 
-.neutral {
- 
+
+.options {
+  margin: 3rem 1rem
+}
+.sliders, .wrapper_neutral  {
+  padding: 0.5rem;
+}
+
+.sliders {
+  margin-bottom: 0.5rem;
+}
+.sliders input  {
+  margin-right: 1rem;
+  margin-bottom: 1.3rem;
+}
+.option {
+  padding: 0.5rem;
+
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%; 
+  height: 0.6rem;
+  opacity: 0.7;
+  -webkit-transition: .2s; 
+  transition: opacity .2s;
+}
+.option::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid;
+  width: 0.9rem;
+  height: 2.5rem;
+  cursor: pointer;
+
+  background-color: white;
+}
+
+.option::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+#yellow {
+  background-color: yellow;
+}
+#green {
+  background-color: green;
+}
+#red {
+  background-color: red;
+}
+
+.diagramm {
+  padding: 0.5rem;
 }
