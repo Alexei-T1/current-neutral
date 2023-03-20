@@ -1,5 +1,4 @@
 
-
 class Vector {
   constructor(len, angle, startPoint = { x: 0, y: 0}, lineColor = 'black', lineWidth = 1)
   {
@@ -17,6 +16,10 @@ class Vector {
     const k = Math.PI / 180;
     return angle * k;
   }
+  toDeg(angle) {
+    const k = 180 / Math.PI;
+    return angle * k;
+  }
 
   draw(field) {
 
@@ -29,6 +32,9 @@ class Vector {
     field.lineTo(xE, yE);
     field.strokeStyle = this.color; 
     field.stroke();
+  }
+  getEnd(){
+    return this.endPoint;
   }
 
 }

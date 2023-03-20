@@ -10,9 +10,8 @@ class VectorAxe extends Vector {
     if(arrow) { this.drawArray(field) }     
   }
 
-  drawArray(field, color = 'black') {
-    const len = 25;
-    const angleArray = 10;
+  drawArray(field, color = 'black', lineWidth = 1, angleArray = 10, len = 25 ) {
+
     const shortLen = Math.sin(this.toRadian(angleArray))*len*2;
 
     field.beginPath();
@@ -22,7 +21,7 @@ class VectorAxe extends Vector {
     
         [ xE, yE ] = [ xS - Math.cos(this.toRadian(angleArray - this.angle))*len, 
         yS - Math.sin(this.toRadian(angleArray - this.angle))*len ];
-        field.lineWidth = 1;
+        field.lineWidth = lineWidth;
         field.lineTo(xE, yE);
         [ xS, yS ] = [ xE, yE ];
         [ xE, yE ] = [ xS - Math.cos(this.toRadian(90 + this.angle))*shortLen, 
