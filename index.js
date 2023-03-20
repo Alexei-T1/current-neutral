@@ -40,6 +40,7 @@ const canvas = document.querySelector('.field');
 calcDiagramm(canvas, startPoint, valueCur) ;
 
 const sliders = Array.from(document.querySelectorAll('.option'));
+const labels = Array.from(document.querySelectorAll('label'));
 
 sliders.forEach( (i) => {
   i.min = '0';
@@ -51,12 +52,15 @@ sliders.forEach( (i) => {
       switch (ev.target.id) {
         case 'yellow':
           valueCur.len90 = ev.target.value;
+          labels[0].innerText = `${ev.target.value}%`;
           break;
         case 'green':
            valueCur.len210 = ev.target.value;
+           labels[1].innerText = `${ev.target.value}%`;
            break;
         case 'red':
           valueCur.len330 = ev.target.value;
+          labels[2].innerText = `${ev.target.value}%`;
           break;
       }
    

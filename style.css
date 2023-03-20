@@ -23,11 +23,15 @@ body, .wrapper {
 }
 .neutral_current {
   font-size: 1.4rem;
+  box-shadow: 0 2px blue;
+  display: inline-block;
+  width: 4rem;
 }
 
 
 .options {
-  margin: 3rem 1rem
+  margin: 3rem 1rem;
+  width: 20rem;
 }
 .sliders, .wrapper_neutral  {
   padding: 0.5rem;
@@ -36,11 +40,9 @@ body, .wrapper {
 .sliders {
   margin-bottom: 0.5rem;
 }
-.sliders input  {
-  margin-right: 1rem;
-  margin-bottom: 1.3rem;
-}
+
 .option {
+  display: block;
   padding: 0.5rem;
 
   -webkit-appearance: none;
@@ -51,6 +53,26 @@ body, .wrapper {
   -webkit-transition: .2s; 
   transition: opacity .2s;
 }
+.sliders label {
+ display: block;
+ margin: 0 auto 0.5rem auto;
+ 
+ font-size: 0.8rem;
+ text-align: center;
+ line-height: 1rem;
+ width: 3.2rem;
+}
+label[for=yellow] {
+  box-shadow: 0 2px yellow;
+ }
+ label[for=green] {
+  box-shadow: 0 2px green;
+ }
+ label[for=red] {
+  box-shadow: 0 2px red;
+ }
+
+
 .option::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
